@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI EXPERIMENT LAB | Premium Generative AI Assets</title>
-    <meta name="description" content="The official research terminal for AI Experiment Lab 101. High-fidelity AI prompts, cosmic noir aesthetics, and generative art tools.">
-    <meta name="keywords" content="AI Prompts, Midjourney, Cosmic Horror, Retro Futurism, Generative AI, Digital Assets">
-    <meta name="author" content="AI Experiment Lab">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="AI EXPERIMENT LAB // ACCESS GRANTED">
-    <meta property="og:description" content="Unlock the Singularity. Premium AI Prompts & Assets.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aiexperimentlab101.github.io">
+    <title>AI Experiment Lab | Premium Research</title>
+    
+    <meta name="description" content="AI Experiment Lab. The premium destination for high-fidelity generative AI assets and prompt engineering.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* 5. TITAN CSS ENGINE */
+        /* THE "DARK LUX" THEME */
         :root {
-            --neon: #00f3ff;
-            --bg: #050505;
-            --glass: rgba(20, 20, 20, 0.8);
+            --bg: #030305; /* Premium Dark */
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-muted: #888888;
+            --accent-gradient: linear-gradient(90deg, #7928CA, #FF0080); /* Vercel/Linear Glow */
+            --button-glow: 0 0 20px rgba(255, 0, 128, 0.4);
         }
-        
+
         * { box-sizing: border-box; }
 
         body {
             background-color: var(--bg);
-            color: var(--neon);
-            font-family: 'Space Mono', monospace;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -39,106 +36,136 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            /* Cyber Grid Background */
-            background-image: 
-                linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
+            overflow-x: hidden;
         }
 
+        /* THE AURORA BACKGROUND GLOW */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: var(--accent-gradient);
+            filter: blur(120px); /* The expensive blur effect */
+            opacity: 0.15;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        /* THE GLASS CARD */
         .container {
-            background: var(--glass);
-            border: 1px solid #333;
-            padding: 40px;
-            max-width: 600px;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 60px 40px;
+            max-width: 500px;
             width: 100%;
+            border-radius: 24px;
             text-align: center;
-            box-shadow: 0 0 50px rgba(0, 243, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* TYPOGRAPHY */
+        .label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 500;
         }
 
         h1 {
             font-size: 2.5rem;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px var(--neon);
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+            background: linear-gradient(180deg, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .tagline {
-            color: #fff;
-            opacity: 0.8;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            font-weight: 300;
         }
 
-        /* FEATURE LIST */
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 30px;
-            font-size: 0.8rem;
-            color: #aaa;
-        }
-        .features span { border: 1px solid #333; padding: 5px 10px; border-radius: 4px; }
-
-        /* BUTTONS */
+        /* PREMIUM BUTTONS */
         .btn {
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid var(--neon);
-            color: var(--neon);
-            padding: 20px;
-            text-decoration: none;
-            font-weight: bold;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
-            transition: 0.3s;
-            text-transform: uppercase;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: 1px solid transparent;
         }
 
-        .btn:hover {
-            background: var(--neon);
-            color: #000;
-            box-shadow: 0 0 30px var(--neon);
-            transform: scale(1.02);
-            cursor: pointer;
+        /* PRIMARY ACTION (Gradient Border) */
+        .btn-primary {
+            background: 
+                linear-gradient(#000, #000) padding-box,
+                var(--accent-gradient) border-box;
+            color: #fff;
+            border: 1px solid transparent;
+            position: relative;
         }
 
-        footer { margin-top: 30px; color: #555; font-size: 0.7rem; }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--button-glow);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* FOOTER */
+        .footer-link {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #555;
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>AI_EXP_LAB</h1>
-        <p class="tagline">// DOCUMENTING THE SINGULARITY</p>
+        <span class="label">Research Terminal 101</span>
+        <h1>AI Experiment Lab</h1>
+        <p>The premier archive for generative AI assets. High-fidelity prompts, architectural logic, and cosmic noir aesthetics.</p>
 
-        <div class="features">
-            <span>⚡ INSTANT ACCESS</span>
-            <span>💎 PRO QUALITY</span>
-            <span>🔓 COMMERCIAL USE</span>
-        </div>
-
-        <a href="https://8332170281457.gumroad.com/l/tiaxvy" class="btn">
-            <span>🧬 GET COSMIC PROMPTS</span>
-            <span>$5.00</span>
+        <a href="https://8332170281457.gumroad.com/l/tiaxvy" class="btn btn-primary">
+            Unlock Prompt Pack ($5)
         </a>
 
-        <a href="https://www.youtube.com/@theaidigitalexplosion" class="btn">
-            <span>📺 WATCH EXPERIMENTS</span>
-            <span>FREE</span>
+        <a href="https://www.youtube.com/@theaidigitalexplosion" class="btn btn-secondary">
+            View Research Data
         </a>
 
+        <span class="footer-link">SECURE CONNECTION // 2025</span>
     </div>
-
-    <footer>
-        SECURE CONNECTION // 2025<br>
-        AI EXPERIMENT LAB 101
-    </footer>
 
 </body>
 </html>
